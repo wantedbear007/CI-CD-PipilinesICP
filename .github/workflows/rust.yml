@@ -44,4 +44,4 @@ jobs:
 
     - name: Deploy canisters
       run: |
-        dfx deploy testing_backend
+        dfx deploy testing_backend --playground
