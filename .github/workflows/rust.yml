@@ -33,16 +33,15 @@ jobs:
     - name: Starting DFX instance
       run: |
         dfx start --clean --background
+
+    - name: Creating Canisters
+      run: |
+        dfx canister create testing_backend --playground
+
+    - name: Building Canisters
+      run: |
+        dfx build testing_backend --playground
+
+    - name: Deploy canisters
+      run: |
         dfx deploy testing_backend --playground
-
-    # - name: Creating Canisters
-    #   run: |
-    #     dfx canister create testing_backend
-
-    # - name: Building Canisters
-    #   run: |
-    #     dfx build testing_backend
-
-    # - name: Deploy canisters
-    #   run: |
-    #     dfx deploy testing_backend --playground
